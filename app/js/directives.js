@@ -24,7 +24,8 @@ directives.directive('ccxCopyright', function() {
   };
 });
 
-directives.directive('date', function() {
+directives.directive('date', function()
+{
   return {
     restrict: 'E',
     template: function() {
@@ -33,16 +34,10 @@ directives.directive('date', function() {
   };
 });
 
-directives.directive('visitor', function($parse) {
+directives.directive('visitor', function()
+{
   return {
-    link: function linkFn(scope, linkElement, attributes) {
-      console.log('linkFn(', scope, linkElement, attributes);
-
-      scope.$watch('visitorInfo', function(visitorInfo) {
-        linkElement.text('Hello' + visitorInfo);
-      });
-    },
-    restirct: 'E',
+    restrict: 'E',
     templateUrl: 'partials/visitor.html'
   };
 });

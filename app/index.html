@@ -14,7 +14,8 @@
         </div>
 
         <div class="visitor-info">
-          <input type="text" placeholder="Your Name" ng-model="visitorInfo"/>
+          <input type="text" placeholder="Your Name" ng-model="visitor.name"/>
+          <input type="email" placeholder="Your E-mail" ng-model="visitor.email"/>
         </div>
       </div>
 
@@ -23,8 +24,12 @@
 
       <!-- The footer containing application details -->
       <div class="app-info">
+        <div class="visitor-info">
+          <input type="text" placeholder="Your Name" ng-model="visitor.name"/>
+          <input type="email" placeholder="Your E-mail" ng-model="visitor.email"/>
+        </div>
         <visitor></visitor>
-        Plotting Tests: v<span data-app-version></span>
+        Plotting Tests: <span data-app-version></span>
         by <author></author>
         : <ccx-copyright></ccx-copyright>
       </div>
