@@ -1,0 +1,110 @@
+/* app css stylesheet */
+
+.menu {
+  list-style: none;
+  border-bottom: 0.1em solid black;
+  margin-bottom: 2em;
+  padding: 0 0 0.5em;
+}
+
+.menu:before {
+  content: "[";
+}
+
+.menu:after {
+  content: "]";
+}
+
+.menu > li {
+  display: inline;
+}
+
+.menu > li:before {
+  content: "|";
+  padding-right: 0.3em;
+}
+
+.menu > li:nth-child(1):before {
+  content: "";
+  padding: 0;
+}
+
+body {
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background-color: skyblue;
+}
+
+.app-background {
+  padding: 5px 5px 5px 5px;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  position: absolute;
+  background-color: lightgray;
+}
+
+.app-info {
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  position: absolute;
+  color: white;
+  background-color: gray;
+  text-align: center;
+}
+
+.app-nav {
+  left: 5px;
+  right: 5px;
+  top: 5px;
+  position: absolute;
+  color: white;
+  background-color: gray;
+  text-align: center;
+}
+
+.app-tab {
+  padding: 2px 2px 2px 2px;
+  border-top: 3px solid gray;
+  border-left: 3px solid gray;
+  border-right: 1px solid gray;
+  border-bottom: 3px solid gray;
+  position: relative;
+  float: left;
+  background-color: skyblue;
+  color: white;
+}
+
+.visitor-info {
+  padding-top: 1px;
+  padding-right: 2px;
+  position: relative;
+  float: right;
+  color: white;
+}
+
+.app-tab a {
+  color: white;
+  text-decoration: none;
+}
+
+.app-view {
+  position: absolute;
+  top: 2.3em;
+  left: 5px;
+  right: 5px;
+  bottom: 1.7em;
+  padding: 5px 5px 5px 5px;
+  background-color: white;
+}
+
+.wb-author {
+  background-color: orange;
+  border-radius: 3px;
+	border-color: black;
+  box-shadow: 2px 2px 2px #888;
+}
