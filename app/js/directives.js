@@ -38,6 +38,11 @@ directives.directive('visitor', function()
 {
   return {
     restrict: 'E',
-    templateUrl: 'partials/visitor.html'
+    template: function($scope)
+    {
+      var name = new String($scope.visitor.name).replace(/ /g, '');
+
+      return (name.length > 0) ? ("<span>Vistitor: " + name + "</span>") : "";
+    }
   };
 });
