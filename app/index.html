@@ -13,22 +13,18 @@
           <a href="{{tab.path}}">{{tab.name}}</a>
         </div>
 
+        <div class="visitor-info">
+          <input type="text" placeholder="Your Name" ng-model="visitor.name"/>
+          <input type="email" placeholder="Your E-mail" ng-model="visitor.email"/>
+        </div>
       </div>
 
       <!-- The application view area -->
       <div class="app-view" data-ng-view></div>
 
       <!-- The footer containing application details -->
-      <div class="app-info">
-        <div class="visitor-info">
-          <input type="text" placeholder="Your Name" ng-model="visitor.name"/>
-          <input type="email" placeholder="Your E-mail" ng-model="visitor.email"/>
-        </div>
-        <visitor></visitor>
-        Plotting Tests: <span data-app-version></span>
-        by <author></author>
-        : <ccx-copyright></ccx-copyright>
-      </div>
+      <footer></footer>
+      <!--div footer></div-->
 
       <!-- In production use:
       <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>

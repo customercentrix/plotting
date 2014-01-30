@@ -13,5 +13,6 @@ var plotting = angular.module('plotting', [
 plotting.config(['$routeProvider', function($routeProvider){
   $routeProvider.when('/name', {templateUrl: 'partials/name.html', controller: 'NameController'});
   $routeProvider.when('/time', {templateUrl: 'partials/time.html', controller: 'TimeController'});
+  $routeProvider.when('/resources', {templateUrl: 'partials/resources.html', controller: 'ResourceController'});
   $routeProvider.otherwise({redirectTo: '/name'});
 }]);

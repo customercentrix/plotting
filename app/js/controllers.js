@@ -4,7 +4,8 @@
 
 var app = angular.module('plotting.controllers', []);
 
-app.controller('NavController', function($scope){
+app.controller('NavController', function($scope, visitorService){
+    $scope.visitor = visitorService.visitor;
     $scope.tabs = [
       {
         'name' : 'By Name',
@@ -19,6 +20,29 @@ app.controller('NavController', function($scope){
         'path' : '#/about'
       }
     ];
+});
+
+app.controller('NavController', function($scope, $timeout, visitorService, resourceFetcherService){
+  $scope.resourceCache = resourceFetcherService.cache;
+  $scope.cacheArray = [];
+
+  $scope.$watch('resourceCache.length', function()
+  {
+    $timeout(function()
+    {
+      console.log("cache changed");
+
+      var c = $scope.resourceCache;
+
+      for (i in c)
+      {
+        if (c.hasOwnProperty(i))
+        {
+          $scope.cacheArray.push(c[i]);
+        }
+      }
+    }, 0);
+  });
 });
 
 app.controller('NameController', function() {

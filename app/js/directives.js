@@ -34,15 +34,24 @@ directives.directive('date', function()
   };
 });
 
+
+directives.directive('footer', function(visitorService)
+{
+  return {
+    restrict: 'EA',
+    templateUrl: "partials/footer.html",
+    link: function(scope, element, attributes)
+    {
+      scope.visitor = visitorService.visitor;
+    }
+  };
+});
+
 directives.directive('visitor', function()
 {
   return {
-    restrict: 'E',
-    template: function($scope)
-    {
-      var name = new String($scope.visitor.name).replace(/ /g, '');
-
-      return (name.length > 0) ? ("<span>Vistitor: " + name + "</span>") : "";
-    }
+    restrict: 'EA',
+    scope: {user: "="},
+    template: "<span>Visitor: {{user.name}}</span>",
   };
 });
